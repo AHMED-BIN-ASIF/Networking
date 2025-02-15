@@ -397,9 +397,11 @@
               </label>
             </div>
             <div class="form-btn-grp">
-              <a class="network-btn" onclick="generateOutput(event, 1)">Populate Fields</a>
-              <button type="submit" class="network-btn" onclick="generateOutput(event, 1)">Generate Network</button>
-            </div>
+              <!-- Prevents the page reload by using event.preventDefault() in JS -->
+              <button class="network-btn" onclick="populateForm(1); return false;">Populate Fields</button>
+              <button type="button" class="network-btn" onclick="generateOutput(event, 1)">Generate Network</button>
+          </div>
+          
           </div>
         </form>
       </div>
